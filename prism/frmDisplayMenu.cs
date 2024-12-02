@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace prjEnrollifyCS
 {
@@ -58,8 +59,12 @@ namespace prjEnrollifyCS
             const string TAB4 = "\t";
             string spaces = "";
 
-            listTickets.Items.Add("Ticket #" + TAB2 + "Ticket Name" + TAB4 + "Date" + TAB2 + "Status" + TAB2 + "Description" + "\n");
-
+            
+            listTicket.View = View.Details;
+            listTicket.Columns.Add("Ticket #");
+            listTicket.Columns.Add("Date", 150);
+            listTicket.Columns.Add("Status", 150);
+            listTicket.Columns.Add("Description", 250);
             while (datareader.Read())
             {
                 tickid = datareader["TicketID"].ToString();
@@ -75,8 +80,8 @@ namespace prjEnrollifyCS
                 create_date = DateTime.Parse(credate);
                 //Ticket ticketRec = new Ticket(ticket_id, create_date, fn, ln, stat, desc, empl_id);
                 //ticketList.Add(ticketRec);
-
-                listTickets.Items.Add(ticket_id + credate + fn + ln + stat + desc);
+                listTicket.Items.Add(new ListViewItem(new string[] { tickid, credate, stat, desc }));
+                listTicket.GridLines = true;
 
                 ticket_index++;
             }

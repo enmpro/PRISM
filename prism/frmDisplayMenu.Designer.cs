@@ -39,7 +39,8 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.listTickets = new System.Windows.Forms.ListBox();
+            this.listTicket = new System.Windows.Forms.ListView();
+            this.ticketLabel = new System.Windows.Forms.Label();
             btnSubmit = new System.Windows.Forms.Button();
             this.grpOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,7 +51,7 @@
             // 
             btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnSubmit.ForeColor = System.Drawing.Color.Black;
-            btnSubmit.Location = new System.Drawing.Point(516, 322);
+            btnSubmit.Location = new System.Drawing.Point(899, 356);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new System.Drawing.Size(114, 35);
             btnSubmit.TabIndex = 4;
@@ -62,7 +63,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(274, 19);
+            this.lblWelcome.Location = new System.Drawing.Point(494, 9);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(245, 37);
             this.lblWelcome.TabIndex = 0;
@@ -72,7 +73,7 @@
             // 
             this.grpOptions.Controls.Add(this.optRequest);
             this.grpOptions.Controls.Add(this.optView);
-            this.grpOptions.Location = new System.Drawing.Point(469, 191);
+            this.grpOptions.Location = new System.Drawing.Point(834, 201);
             this.grpOptions.Name = "grpOptions";
             this.grpOptions.Size = new System.Drawing.Size(225, 119);
             this.grpOptions.TabIndex = 2;
@@ -109,7 +110,7 @@
             this.lblLIS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLIS.ForeColor = System.Drawing.Color.White;
-            this.lblLIS.Location = new System.Drawing.Point(281, 71);
+            this.lblLIS.Location = new System.Drawing.Point(501, 61);
             this.lblLIS.Name = "lblLIS";
             this.lblLIS.Size = new System.Drawing.Size(233, 26);
             this.lblLIS.TabIndex = 3;
@@ -127,7 +128,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(48)))), ((int)(((byte)(97)))));
             this.pictureBox1.Location = new System.Drawing.Point(-4, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(807, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(1192, 108);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -136,25 +137,37 @@
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.pictureBox2.Location = new System.Drawing.Point(-4, 100);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(807, 353);
+            this.pictureBox2.Size = new System.Drawing.Size(1192, 468);
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // listTickets
+            // listTicket
             // 
-            this.listTickets.FormattingEnabled = true;
-            this.listTickets.Location = new System.Drawing.Point(34, 171);
-            this.listTickets.Name = "listTickets";
-            this.listTickets.Size = new System.Drawing.Size(361, 186);
-            this.listTickets.TabIndex = 7;
+            this.listTicket.HideSelection = false;
+            this.listTicket.Location = new System.Drawing.Point(39, 201);
+            this.listTicket.Name = "listTicket";
+            this.listTicket.Size = new System.Drawing.Size(747, 317);
+            this.listTicket.TabIndex = 8;
+            this.listTicket.UseCompatibleStateImageBehavior = false;
+            // 
+            // ticketLabel
+            // 
+            this.ticketLabel.AutoSize = true;
+            this.ticketLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketLabel.Location = new System.Drawing.Point(313, 147);
+            this.ticketLabel.Name = "ticketLabel";
+            this.ticketLabel.Size = new System.Drawing.Size(129, 33);
+            this.ticketLabel.TabIndex = 9;
+            this.ticketLabel.Text = "Ticket(s)";
             // 
             // frmDisplayMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listTickets);
+            this.ClientSize = new System.Drawing.Size(1184, 563);
+            this.Controls.Add(this.ticketLabel);
+            this.Controls.Add(this.listTicket);
             this.Controls.Add(btnSubmit);
             this.Controls.Add(this.lblLIS);
             this.Controls.Add(this.grpOptions);
@@ -185,6 +198,7 @@
         public System.Windows.Forms.Label lblLIS;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ListBox listTickets;
+        private System.Windows.Forms.ListView listTicket;
+        private System.Windows.Forms.Label ticketLabel;
     }
 }
