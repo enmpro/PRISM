@@ -14,6 +14,7 @@ namespace prjEnrollifyCS
     public partial class frmDisplayMenu : BaseForm
     {
         public int UserID { get; set; }
+        List<Ticket> ticketList = new List<Ticket>();  
         public frmDisplayMenu()
         {
             InitializeComponent();
@@ -49,7 +50,15 @@ namespace prjEnrollifyCS
 
             int ticket_index = 0;
             string tickid, credate, fn, ln, stat, desc, emplid;
+            short empl_id, ticket_id = 0;
+            DateTime create_date = DateTime.Now;
+            const string TAB = "\t";
+            const string TAB2 = "\t";
+            const string TAB3 = "\t";
+            const string TAB4 = "\t";
+            string spaces = "";
 
+            listTickets.Items.Add("Ticket #" + TAB2 + "Ticket Name" + TAB4 + "Date" + TAB2 + "Status" + TAB2 + "Description" + "\n");
 
             while (datareader.Read())
             {
@@ -61,7 +70,17 @@ namespace prjEnrollifyCS
                 desc = datareader["Description"].ToString();
                 emplid = datareader["UserID"].ToString();
 
+                ticket_id = Int16.Parse(tickid);
+                empl_id = Int16.Parse(emplid);
+                create_date = DateTime.Parse(credate);
+                //Ticket ticketRec = new Ticket(ticket_id, create_date, fn, ln, stat, desc, empl_id);
+                //ticketList.Add(ticketRec);
+
+                listTickets.Items.Add(ticket_id + credate + fn + ln + stat + desc);
+
+                ticket_index++;
             }
+            con.Close();
         }
     }
 }
