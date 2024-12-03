@@ -65,9 +65,9 @@ C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.frmDispl
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.frmLogin.resources
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.frmRequest.resources
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.frmSplashScreen.resources
-C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.frmView.resources
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.Properties.Resources.resources
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.csproj.GenerateResource.cache
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.csproj.CoreCompileInputs.cache
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.exe
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.pdb
+C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.frmNewTick.resources

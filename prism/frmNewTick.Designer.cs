@@ -36,6 +36,7 @@
             this.enrollifyScheduleDataSet = new prjEnrollifyCS.EnrollifyScheduleDataSet();
             this.enrollifyScheduleDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enrollifyScheduleDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.enrollifyScheduleDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollifyScheduleDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollifyScheduleDataSetBindingSource1)).BeginInit();
@@ -62,7 +63,7 @@
             this.btnCreate.TabIndex = 2;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnRequest_Click);
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnGoBack
             // 
@@ -90,12 +91,20 @@
             this.enrollifyScheduleDataSetBindingSource1.DataSource = this.enrollifyScheduleDataSet;
             this.enrollifyScheduleDataSetBindingSource1.Position = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(480, 127);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
             // frmNewTick
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1184, 563);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.lblTickReq);
@@ -119,5 +128,6 @@
         private System.Windows.Forms.BindingSource enrollifyScheduleDataSetBindingSource;
         private EnrollifyScheduleDataSet enrollifyScheduleDataSet;
         private System.Windows.Forms.BindingSource enrollifyScheduleDataSetBindingSource1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
