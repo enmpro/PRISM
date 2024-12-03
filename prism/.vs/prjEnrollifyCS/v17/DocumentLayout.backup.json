@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|c:\\users\\hyperman\\documents\\github\\prism\\prism\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|c:\\users\\hyperman\\documents\\github\\prism\\prism\\frmnewtick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmnewtick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|c:\\users\\hyperman\\documents\\github\\prism\\prism\\frmdisplaymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmdisplaymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|c:\\users\\hyperman\\documents\\github\\prism\\prism\\frmnewtick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmnewtick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -19,20 +23,16 @@
       "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmdisplaymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|c:\\users\\hyperman\\documents\\github\\prism\\prism\\frmdisplaymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmdisplaymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|c:\\users\\hyperman\\documents\\github\\prism\\prism\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|solutionrelative:frmview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DDEE759-AE24-47DA-BD6B-471330D41F21}|prjEnrollifyCS.csproj|C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmsplashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -62,24 +62,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
               "ToolTip": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmLogin.cs",
               "RelativeToolTip": "frmLogin.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAApwF4AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAApwF4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T20:03:47.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\Employee.cs",
               "RelativeDocumentMoniker": "Employee.cs",
@@ -91,65 +91,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "frmDisplayMenu.cs",
               "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmDisplayMenu.cs",
               "RelativeDocumentMoniker": "frmDisplayMenu.cs",
               "ToolTip": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmDisplayMenu.cs",
               "RelativeToolTip": "frmDisplayMenu.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvxcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T02:45:04.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "frmDisplayMenu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmDisplayMenu.cs",
               "RelativeDocumentMoniker": "frmDisplayMenu.cs",
               "ToolTip": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmDisplayMenu.cs [Design]",
               "RelativeToolTip": "frmDisplayMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T21:22:56.662Z"
+              "WhenOpened": "2024-11-30T21:22:56.662Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "frmRequest.cs [Design]",
               "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmRequest.cs",
               "RelativeDocumentMoniker": "frmRequest.cs",
               "ToolTip": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmRequest.cs [Design]",
               "RelativeToolTip": "frmRequest.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T20:48:44.667Z"
+              "WhenOpened": "2024-12-01T20:48:44.667Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmView.cs",
-              "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmView.cs",
-              "RelativeDocumentMoniker": "frmView.cs",
-              "ToolTip": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmView.cs",
-              "RelativeToolTip": "frmView.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAcwCUAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmNewTick.cs",
+              "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmNewTick.cs",
+              "RelativeDocumentMoniker": "frmNewTick.cs",
+              "ToolTip": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmNewTick.cs",
+              "RelativeToolTip": "frmNewTick.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAywBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T02:31:45.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmView.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmView.cs",
-              "RelativeDocumentMoniker": "frmView.cs",
-              "ToolTip": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmView.cs [Design]",
-              "RelativeToolTip": "frmView.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T02:28:45.25Z"
+              "WhenOpened": "2024-12-01T02:31:45.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "frmNewTick.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmNewTick.cs",
+              "RelativeDocumentMoniker": "frmNewTick.cs",
+              "ToolTip": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmNewTick.cs [Design]",
+              "RelativeToolTip": "frmNewTick.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T02:28:45.25Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\HyperMan\\Documents\\GitHub\\PRISM\\prism\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
