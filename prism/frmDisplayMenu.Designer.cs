@@ -33,14 +33,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDisplayMenu));
             this.lblWelcome = new System.Windows.Forms.Label();
             this.grpOptions = new System.Windows.Forms.GroupBox();
-            this.optRequest = new System.Windows.Forms.RadioButton();
-            this.optView = new System.Windows.Forms.RadioButton();
+            this.editTick = new System.Windows.Forms.RadioButton();
+            this.newTick = new System.Windows.Forms.RadioButton();
             this.lblLIS = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.listTicket = new System.Windows.Forms.ListView();
             this.ticketLabel = new System.Windows.Forms.Label();
+            this.deleteTick = new System.Windows.Forms.RadioButton();
             btnSubmit = new System.Windows.Forms.Button();
             this.grpOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,38 +72,39 @@
             // 
             // grpOptions
             // 
-            this.grpOptions.Controls.Add(this.optRequest);
-            this.grpOptions.Controls.Add(this.optView);
+            this.grpOptions.Controls.Add(this.deleteTick);
+            this.grpOptions.Controls.Add(this.editTick);
+            this.grpOptions.Controls.Add(this.newTick);
             this.grpOptions.Location = new System.Drawing.Point(834, 201);
             this.grpOptions.Name = "grpOptions";
-            this.grpOptions.Size = new System.Drawing.Size(225, 119);
+            this.grpOptions.Size = new System.Drawing.Size(225, 149);
             this.grpOptions.TabIndex = 2;
             this.grpOptions.TabStop = false;
             this.grpOptions.Text = "Options";
             // 
-            // optRequest
+            // editTick
             // 
-            this.optRequest.AutoSize = true;
-            this.optRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optRequest.Location = new System.Drawing.Point(23, 69);
-            this.optRequest.Name = "optRequest";
-            this.optRequest.Size = new System.Drawing.Size(179, 28);
-            this.optRequest.TabIndex = 1;
-            this.optRequest.TabStop = true;
-            this.optRequest.Text = "Request a Course";
-            this.optRequest.UseVisualStyleBackColor = true;
+            this.editTick.AutoSize = true;
+            this.editTick.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editTick.Location = new System.Drawing.Point(23, 53);
+            this.editTick.Name = "editTick";
+            this.editTick.Size = new System.Drawing.Size(115, 28);
+            this.editTick.TabIndex = 1;
+            this.editTick.TabStop = true;
+            this.editTick.Text = "Edit Ticket";
+            this.editTick.UseVisualStyleBackColor = true;
             // 
-            // optView
+            // newTick
             // 
-            this.optView.AutoSize = true;
-            this.optView.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optView.Location = new System.Drawing.Point(23, 19);
-            this.optView.Name = "optView";
-            this.optView.Size = new System.Drawing.Size(156, 28);
-            this.optView.TabIndex = 0;
-            this.optView.TabStop = true;
-            this.optView.Text = "View Schedule";
-            this.optView.UseVisualStyleBackColor = true;
+            this.newTick.AutoSize = true;
+            this.newTick.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newTick.Location = new System.Drawing.Point(23, 19);
+            this.newTick.Name = "newTick";
+            this.newTick.Size = new System.Drawing.Size(122, 28);
+            this.newTick.TabIndex = 0;
+            this.newTick.TabStop = true;
+            this.newTick.Text = "New Ticket";
+            this.newTick.UseVisualStyleBackColor = true;
             // 
             // lblLIS
             // 
@@ -160,6 +162,18 @@
             this.ticketLabel.TabIndex = 9;
             this.ticketLabel.Text = "Ticket(s)";
             // 
+            // deleteTick
+            // 
+            this.deleteTick.AutoSize = true;
+            this.deleteTick.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteTick.Location = new System.Drawing.Point(23, 87);
+            this.deleteTick.Name = "deleteTick";
+            this.deleteTick.Size = new System.Drawing.Size(154, 28);
+            this.deleteTick.TabIndex = 2;
+            this.deleteTick.TabStop = true;
+            this.deleteTick.Text = "Remove Ticket";
+            this.deleteTick.UseVisualStyleBackColor = true;
+            // 
             // frmDisplayMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,13 +206,14 @@
 
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.GroupBox grpOptions;
-        private System.Windows.Forms.RadioButton optRequest;
-        private System.Windows.Forms.RadioButton optView;
+        private System.Windows.Forms.RadioButton editTick;
+        private System.Windows.Forms.RadioButton newTick;
         private System.Windows.Forms.ImageList imageList1;
         public System.Windows.Forms.Label lblLIS;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListView listTicket;
         private System.Windows.Forms.Label ticketLabel;
+        private System.Windows.Forms.RadioButton deleteTick;
     }
 }

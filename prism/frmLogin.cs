@@ -93,7 +93,7 @@ namespace prjEnrollifyCS
                 //pass student vector & index of logged in user
 
                 frmDisplayMenu d = new frmDisplayMenu();
-                d.UserID = user_id;
+                d.userID = user_id;
                 d.lblLIS.Text = "Welcome to PRISM, " + lisname;
                 d.lblLIS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 d.Show();
@@ -102,7 +102,7 @@ namespace prjEnrollifyCS
             else
             {
 
-                MessageBox.Show("Login UnSuccessful", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Wrong Username or Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 

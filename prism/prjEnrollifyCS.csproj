@@ -87,11 +87,11 @@
     <Compile Include="frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmView.cs">
+    <Compile Include="frmNewTick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmView.Designer.cs">
-      <DependentUpon>frmView.cs</DependentUpon>
+    <Compile Include="frmNewTick.Designer.cs">
+      <DependentUpon>frmNewTick.cs</DependentUpon>
     </Compile>
     <Compile Include="Major.cs" />
     <Compile Include="Program.cs" />
@@ -110,8 +110,8 @@
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmView.resx">
-      <DependentUpon>frmView.cs</DependentUpon>
+    <EmbeddedResource Include="frmNewTick.resx">
+      <DependentUpon>frmNewTick.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

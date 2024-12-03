@@ -14,7 +14,7 @@ namespace prjEnrollifyCS
 {
     public partial class frmDisplayMenu : BaseForm
     {
-        public int UserID { get; set; }
+        public int userID { get; set; }
         List<Ticket> ticketList = new List<Ticket>();  
         public frmDisplayMenu()
         {
@@ -25,9 +25,9 @@ namespace prjEnrollifyCS
 
 
         private void btnSubmit_Click(object sender, EventArgs e)
-        { frmView v = new frmView();
+        { frmNewTick v = new frmNewTick();
             frmRequest r = new frmRequest();
-            if (optView.Checked)
+            if (newTick.Checked)
             {    v.Show();  }
             else
             {   r.Show(); }
@@ -41,8 +41,8 @@ namespace prjEnrollifyCS
             con.Open();
             cmd.Connection = con;
             // use to fetch rows from demo table
-            cmd.CommandText = "Select * from Ticket";
-
+            cmd.CommandText = "Select * from Ticket Where UserID = ?";
+            cmd.Parameters.AddWithValue("?", userID);
 
             // to execute the sql statement
             cmd.ExecuteNonQuery();
@@ -50,18 +50,13 @@ namespace prjEnrollifyCS
             OleDbDataReader datareader = cmd.ExecuteReader();
 
             int ticket_index = 0;
-            string tickid, credate, fn, ln, stat, desc, emplid;
+            string tickid, credate, ticket_name, stat, desc, emplid;
             short empl_id, ticket_id = 0;
             DateTime create_date = DateTime.Now;
-            const string TAB = "\t";
-            const string TAB2 = "\t";
-            const string TAB3 = "\t";
-            const string TAB4 = "\t";
-            string spaces = "";
-
             
             listTicket.View = View.Details;
             listTicket.Columns.Add("Ticket #");
+            listTicket.Columns.Add("Ticket Name", 150);
             listTicket.Columns.Add("Date", 150);
             listTicket.Columns.Add("Status", 150);
             listTicket.Columns.Add("Description", 250);
@@ -69,8 +64,7 @@ namespace prjEnrollifyCS
             {
                 tickid = datareader["TicketID"].ToString();
                 credate = datareader["CreationDate"].ToString();
-                fn = datareader["FirstName"].ToString();
-                ln = datareader["LastName"].ToString();
+                ticket_name = datareader["TicketName"].ToString();
                 stat = datareader["Status"].ToString();
                 desc = datareader["Description"].ToString();
                 emplid = datareader["UserID"].ToString();
@@ -80,7 +74,7 @@ namespace prjEnrollifyCS
                 create_date = DateTime.Parse(credate);
                 //Ticket ticketRec = new Ticket(ticket_id, create_date, fn, ln, stat, desc, empl_id);
                 //ticketList.Add(ticketRec);
-                listTicket.Items.Add(new ListViewItem(new string[] { tickid, credate, stat, desc }));
+                listTicket.Items.Add(new ListViewItem(new string[] { tickid, ticket_name, credate, stat, desc }));
                 listTicket.GridLines = true;
 
                 ticket_index++;

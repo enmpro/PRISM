@@ -11,17 +11,17 @@ using System.Windows.Forms;
 
 namespace prjEnrollifyCS
 {
-    public partial class frmView : Form
+    public partial class frmNewTick : Form
     {
 
         List<Ticket> coursesOffered = new List<Ticket>();
        
-        public frmView()
+        public frmNewTick()
         {
             InitializeComponent();
         }
-
-        private void btnRequest_Click(object sender, EventArgs e)
+       
+        private void btnCreate_Click(object sender, EventArgs e)
         {
             frmRequest r = new frmRequest();
            r.ShowDialog();
