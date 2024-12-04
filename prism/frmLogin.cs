@@ -16,13 +16,25 @@ namespace prjEnrollifyCS
         public frmLogin()
         {
             InitializeComponent();
-
+            txtUser.KeyPress += new KeyPressEventHandler(textBoxEnter);
+            txtPass.KeyPress += new KeyPressEventHandler(textBoxEnter);
         }
+
+        private void textBoxEnter(object sender, KeyPressEventArgs e)
+        {
+           
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; 
+                submitLogin();
+            }
+        }
+
 
         public void frmLogin_Load(object sender, EventArgs e)
         {
             //Connect to the database
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Enrollify.accdb");
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=prismDatabase.accdb");
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.Connection = con;
@@ -61,6 +73,49 @@ namespace prjEnrollifyCS
             
             con.Close();
 
+        }
+
+        private void submitLogin()
+        {
+            string entUser = "", entPass = "";
+            bool loginOK = false;
+
+            entUser = txtUser.Text;
+            entPass = txtPass.Text;
+
+            for (int u = 0; u < employees.Count; u++)
+            {
+
+                if (entUser == employees[u].username && entPass == employees[u].password)
+                {
+                    loginOK = true;
+                    lisname = employees[u].username;
+                    user_id = employees[u].userID;
+                    //  MessageBox.Show("Login Successful, " + lisname, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            txtUser.Text = "";
+            txtPass.Text = "";
+
+            if (loginOK)
+            {
+                //open Display Menu
+                //pass student vector & index of logged in user
+
+                frmDisplayMenu d = new frmDisplayMenu();
+                d.userID = user_id;
+                d.lblLIS.Text = "Welcome to PRISM, " + lisname;
+                d.lblLIS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                d.Show();
+                this.Hide();
+            }
+            else
+            {
+
+                MessageBox.Show("Wrong Username or Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

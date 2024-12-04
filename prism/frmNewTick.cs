@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
-using System.Windows.Forms;
 
 namespace prjEnrollifyCS
 {
-    public partial class frmNewTick : Form
+    public partial class frmNewTick : BaseForm
     {
 
         List<Ticket> coursesOffered = new List<Ticket>();
@@ -13,12 +12,55 @@ namespace prjEnrollifyCS
         public frmNewTick()
         {
             InitializeComponent();
+
+            helpType.Items.AddRange(new string[] { "General", "Networking", "Program" });
+            helpType.SelectedIndexChanged += new EventHandler(helpTypeSelectedItem);
+
+            lblProgName.Visible = false;
+            lblProgType.Visible = false;
+            prgType.Visible = false;
+            prgName.Visible = false;
+
+            prgType.Items.AddRange(new string[] { "Documentation", "Creation", 
+                "Web Development", "3D Development", "Communication" });
+
+            prgName.Items.AddRange(new string[] { "Microsoft Word", "Microsoft Access",
+                 "Microsoft Excel", "Adobe Photoshop", "Adobe Premiere",
+                 "Adobe Dreamweaver", "Blender", "Zoom", "Oracle NetBeans",
+                 "FL Studio" });
+        }
+
+
+
+        private void helpTypeSelectedItem(object sender, EventArgs e)
+        {
+            if (helpType.SelectedItem.ToString() == "General")
+            {
+                lblProgName.Visible = false;
+                lblProgType.Visible = false;
+                prgType.Visible = false;
+                prgName.Visible = false;
+            }
+            if (helpType.SelectedItem.ToString() == "Networking")
+            {
+                lblProgName.Visible = false;
+                lblProgType.Visible = false;
+                prgType.Visible = false;
+                prgName.Visible = false;
+            }
+            if (helpType.SelectedItem.ToString() == "Program")
+            {
+                lblProgName.Visible = true;
+                lblProgType.Visible = true;
+                prgType.Visible = true;
+                prgName.Visible = true;
+            }
         }
        
         private void btnCreate_Click(object sender, EventArgs e)
         {
             frmRequest r = new frmRequest();
-           r.ShowDialog();
+            r.ShowDialog();
             this.Hide();
         }
         
@@ -37,7 +79,7 @@ namespace prjEnrollifyCS
         private void frmView_Load(object sender, EventArgs e)
         {
             //Connect to the database
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Enrollify.accdb");
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=prismDatabase.accdb");
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.Connection = con;

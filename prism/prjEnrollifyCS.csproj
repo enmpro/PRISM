@@ -58,11 +58,6 @@
     </Compile>
     <Compile Include="College.cs" />
     <Compile Include="Course.cs" />
-    <Compile Include="EnrollifyScheduleDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EnrollifyScheduleDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="frmDisplayMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,17 +118,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="EnrollifyScheduleDataSet.xsc">
-      <DependentUpon>EnrollifyScheduleDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="EnrollifyScheduleDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EnrollifyScheduleDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="EnrollifyScheduleDataSet.xss">
-      <DependentUpon>EnrollifyScheduleDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,7 +132,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Enrollify.accdb">
+    <Content Include="prismDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="school.ico" />

@@ -36,7 +36,7 @@ namespace prjEnrollifyCS
 
         private void frmDisplayMenu_Load(object sender, EventArgs e)
         {
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Enrollify.accdb");
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=prismDatabase.accdb");
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             cmd.Connection = con;

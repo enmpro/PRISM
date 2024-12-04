@@ -56,7 +56,6 @@ C:\Users\HyperMan\Desktop\prjEnrollifyCS\obj\Debug\prjEnrollifyCS.pdb
 C:\Users\HyperMan\Desktop\prjEnrollifyCS\bin\Debug\prjEnrollifyCS.exe.config
 C:\Users\HyperMan\Desktop\prjEnrollifyCS\bin\Debug\prjEnrollifyCS.exe
 C:\Users\HyperMan\Desktop\prjEnrollifyCS\bin\Debug\prjEnrollifyCS.pdb
-C:\Users\HyperMan\Documents\GitHub\PRISM\prism\bin\Debug\Enrollify.accdb
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\bin\Debug\prjEnrollifyCS.exe.config
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\bin\Debug\prjEnrollifyCS.exe
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\bin\Debug\prjEnrollifyCS.pdb
@@ -71,3 +70,4 @@ C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.csproj.C
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.exe
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.pdb
 C:\Users\HyperMan\Documents\GitHub\PRISM\prism\obj\Debug\prjEnrollifyCS.frmNewTick.resources
+C:\Users\HyperMan\Documents\GitHub\PRISM\prism\bin\Debug\prismDatabase.accdb
