@@ -32,9 +32,9 @@
             this.lblTickReq = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnGoBack = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ticketName = new System.Windows.Forms.TextBox();
             this.lblTicName = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.ticketDesc = new System.Windows.Forms.RichTextBox();
             this.lblDesc = new System.Windows.Forms.Label();
             this.prgType = new System.Windows.Forms.ComboBox();
             this.lblProgType = new System.Windows.Forms.Label();
@@ -78,13 +78,13 @@
             this.btnGoBack.UseVisualStyleBackColor = true;
             this.btnGoBack.Click += new System.EventHandler(this.btnMain_Click);
             // 
-            // textBox1
+            // ticketName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(485, 177);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 26);
-            this.textBox1.TabIndex = 4;
+            this.ticketName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketName.Location = new System.Drawing.Point(485, 177);
+            this.ticketName.Name = "ticketName";
+            this.ticketName.Size = new System.Drawing.Size(238, 26);
+            this.ticketName.TabIndex = 4;
             // 
             // lblTicName
             // 
@@ -96,14 +96,14 @@
             this.lblTicName.TabIndex = 5;
             this.lblTicName.Text = "Ticket Name";
             // 
-            // richTextBox1
+            // ticketDesc
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(485, 275);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(238, 96);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.ticketDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketDesc.Location = new System.Drawing.Point(485, 275);
+            this.ticketDesc.Name = "ticketDesc";
+            this.ticketDesc.Size = new System.Drawing.Size(238, 96);
+            this.ticketDesc.TabIndex = 6;
+            this.ticketDesc.Text = "";
             // 
             // lblDesc
             // 
@@ -188,9 +188,9 @@
             this.Controls.Add(this.lblProgType);
             this.Controls.Add(this.prgType);
             this.Controls.Add(this.lblDesc);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ticketDesc);
             this.Controls.Add(this.lblTicName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ticketName);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.lblTickReq);
@@ -208,9 +208,9 @@
         private System.Windows.Forms.Label lblTickReq;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnGoBack;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ticketName;
         private System.Windows.Forms.Label lblTicName;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox ticketDesc;
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.ComboBox prgType;
         private System.Windows.Forms.Label lblProgType;

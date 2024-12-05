@@ -14,13 +14,12 @@ namespace prjEnrollifyCS
 {
     public partial class frmDisplayMenu : BaseForm
     {
-        public int userID { get; set; }
-        List<Ticket> ticketList = new List<Ticket>();  
+        
         public frmDisplayMenu()
         {
             InitializeComponent();
             
-          // lblLIS.Text = "Welcome " + frmLogin.lis;
+          
         }
 
 
@@ -42,7 +41,7 @@ namespace prjEnrollifyCS
             cmd.Connection = con;
             // use to fetch rows from demo table
             cmd.CommandText = "Select * from Ticket Where UserID = ?";
-            cmd.Parameters.AddWithValue("?", userID);
+            cmd.Parameters.AddWithValue("?", EmployeeData.listIndex);
 
             // to execute the sql statement
             cmd.ExecuteNonQuery();

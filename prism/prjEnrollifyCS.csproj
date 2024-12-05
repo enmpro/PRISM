@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="College.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="EmployeeData.cs" />
     <Compile Include="frmDisplayMenu.cs">
       <SubType>Form</SubType>
     </Compile>

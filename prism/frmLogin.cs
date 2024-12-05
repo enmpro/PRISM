@@ -10,16 +10,18 @@ namespace prjEnrollifyCS
 {
     public partial class frmLogin : BaseForm
     {
-        List<Employee> employees = new List<Employee>();
+       
         string lisname = "";
         short user_id = 0;
         public frmLogin()
         {
             InitializeComponent();
+            //key press handler for the enter key
             txtUser.KeyPress += new KeyPressEventHandler(textBoxEnter);
             txtPass.KeyPress += new KeyPressEventHandler(textBoxEnter);
         }
 
+        // the enter button can also be used using this method
         private void textBoxEnter(object sender, KeyPressEventArgs e)
         {
            
@@ -41,7 +43,6 @@ namespace prjEnrollifyCS
             // use to fetch rows from demo table
             cmd.CommandText = "Select * from Employee";
             
-
             // to execute the sql statement
             cmd.ExecuteNonQuery();
             // use to read each row in table
@@ -60,17 +61,16 @@ namespace prjEnrollifyCS
                 dp = datareader["Department"].ToString(); 
                 fn = datareader["FirstName"].ToString();
                 ln = datareader["LastName"].ToString();
-
+                MessageBox.Show(uid + " " + un + " " + pw + " " + dp + " " + fn + " " + ln);
                 //convert strings to numbers
                 uid2 = Int16.Parse(uid); //convert to short
                 //Add to the vector
-                Employee emplyrec = new Employee(uid2, un, pw, dp, fn, ln);
-                employees.Add(emplyrec);
+                //Employee emplyrec = new Employee(uid2, un, pw, dp, fn, ln);
+                EmployeeData.addEmployee(new Employee(uid2, un, pw, dp, fn, ln));
+                //employees.Add(emplyrec);
                 employee_index++;
             }
 
-           // MessageBox.Show("Student file data loaded", "Data Loaded", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
             con.Close();
 
         }
@@ -83,15 +83,17 @@ namespace prjEnrollifyCS
             entUser = txtUser.Text;
             entPass = txtPass.Text;
 
-            for (int u = 0; u < employees.Count; u++)
+            for (int u = 0; u < EmployeeData.employees.Count; u++)
             {
-
-                if (entUser == employees[u].username && entPass == employees[u].password)
+                // check if login is in the database
+                if (entUser == EmployeeData.employees[u].username && entPass == EmployeeData.employees[u].password)
                 {
                     loginOK = true;
-                    lisname = employees[u].username;
-                    user_id = employees[u].userID;
-                    //  MessageBox.Show("Login Successful, " + lisname, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lisname = EmployeeData.employees[u].username;
+                    user_id = EmployeeData.employees[u].userID;
+                    EmployeeData.setListIndex(user_id);
+                    break;
+                 
                 }
             }
 
@@ -100,21 +102,16 @@ namespace prjEnrollifyCS
 
             if (loginOK)
             {
-                //open Display Menu
-                //pass student vector & index of logged in user
-
-                frmDisplayMenu d = new frmDisplayMenu();
-                d.userID = user_id;
-                d.lblLIS.Text = "Welcome to PRISM, " + lisname;
-                d.lblLIS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                d.Show();
+                //open Display 
+                frmDisplayMenu display = new frmDisplayMenu();
+                display.lblLIS.Text = "Welcome to PRISM, " + lisname;
+                display.lblLIS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                display.Show();
                 this.Hide();
             }
             else
             {
-
                 MessageBox.Show("Wrong Username or Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -127,15 +124,17 @@ namespace prjEnrollifyCS
             entUser = txtUser.Text;
             entPass = txtPass.Text;
 
-            for (int u = 0; u < employees.Count; u++)
+            for (int u = 0; u < EmployeeData.employees.Count; u++)
             {
-
-                if (entUser == employees[u].username && entPass == employees[u].password)
+                // check if login is in the database
+                if (entUser == EmployeeData.employees[u].username && entPass == EmployeeData.employees[u].password)
                 { 
                     loginOK = true;
-                    lisname = employees[u].username;
-                    user_id = employees[u].userID;
-                  //  MessageBox.Show("Login Successful, " + lisname, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lisname = EmployeeData.employees[u].username;
+                    user_id = EmployeeData.employees[u].userID;
+                    EmployeeData.setListIndex(user_id);
+                    break;
+                  
                 }
             }
 
@@ -145,13 +144,11 @@ namespace prjEnrollifyCS
             if (loginOK)
             {
                 //open Display Menu
-                //pass student vector & index of logged in user
-
-                frmDisplayMenu d = new frmDisplayMenu();
-                d.userID = user_id;
-                d.lblLIS.Text = "Welcome to PRISM, " + lisname;
-                d.lblLIS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                d.Show();
+                frmDisplayMenu display = new frmDisplayMenu();
+                
+                display.lblLIS.Text = "Welcome to PRISM, " + lisname;
+                display.lblLIS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                display.Show();
                 this.Hide();
             }
             else
@@ -160,8 +157,6 @@ namespace prjEnrollifyCS
                 MessageBox.Show("Wrong Username or Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-
 
         }
 

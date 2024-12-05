@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace prjEnrollifyCS
 {
     public partial class frmNewTick : BaseForm
     {
 
-        List<Ticket> coursesOffered = new List<Ticket>();
        
         public frmNewTick()
         {
             InitializeComponent();
+
+            MessageBox.Show(EmployeeData.employees[2].firstName + " name" );
 
             helpType.Items.AddRange(new string[] { "General", "Networking", "Program" });
             helpType.SelectedIndexChanged += new EventHandler(helpTypeSelectedItem);
@@ -31,7 +33,7 @@ namespace prjEnrollifyCS
         }
 
 
-
+        //hides the text box whether the type is relevant
         private void helpTypeSelectedItem(object sender, EventArgs e)
         {
             if (helpType.SelectedItem.ToString() == "General")
@@ -59,9 +61,7 @@ namespace prjEnrollifyCS
        
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            frmRequest r = new frmRequest();
-            r.ShowDialog();
-            this.Hide();
+            requestTicket();
         }
         
         private void lblInx_Click(object sender, EventArgs e)
@@ -78,36 +78,74 @@ namespace prjEnrollifyCS
 
         private void frmView_Load(object sender, EventArgs e)
         {
-            //Connect to the database
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=prismDatabase.accdb");
-            OleDbCommand cmd = con.CreateCommand();
-            con.Open();
-            cmd.Connection = con;
-            // use to fetch rows from demo table
-            cmd.CommandText = "";
+            MessageBox.Show(EmployeeData.listIndex.ToString());
 
-            
+        }
 
-            // to execute the sql statement
-            //cmd.ExecuteNonQuery();
-            // use to read each row in table
-            //OleDbDataReader datareader = cmd.ExecuteReader();
+        private void requestTicket()
+        {
+            string query = "INSERT INTO Ticket (TicketName, CreationDate, FirstName, LastName, Status, Type, Description, UserID) " +
+                           "VALUES (@tick, @creadate, @fn, @ln, @stat, @type, @desc, @userid)";
+
+            // Connect to the database
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=prismDatabase.accdb";
+            using (OleDbConnection con = new OleDbConnection(connectionString))
+            {
+                using (OleDbCommand cmd = new OleDbCommand(query, con))
+                {
+                    string createDate = DateTime.Now.ToString("MM/dd/yyyy");
+
+                    // Add parameters and display their values
+                    cmd.Parameters.AddWithValue("@tick", ticketName.Text);
+                    cmd.Parameters.AddWithValue("@creadate", createDate);
+                    cmd.Parameters.AddWithValue("@fn", EmployeeData.employees[10].firstName);
+                    cmd.Parameters.AddWithValue("@ln", EmployeeData.employees[EmployeeData.listIndex - 1].lastName);
+                    cmd.Parameters.AddWithValue("@stat", "Open");
+                    cmd.Parameters.AddWithValue("@type", helpType.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@desc", ticketDesc.Text);
+                    cmd.Parameters.AddWithValue("@userid", EmployeeData.employees[EmployeeData.listIndex - 1].userID);
+
+                    // Display parameter values for debugging
+                    MessageBox.Show($"TicketName: {ticketName.Text}\nCreationDate: {createDate}\nFirstName: {EmployeeData.employees[10].firstName}\nLastName: {EmployeeData.employees[EmployeeData.listIndex - 1].lastName}\nStatus: Open\nType: {helpType.SelectedItem.ToString()}\nDescription: {ticketDesc.Text}\nUserID: {EmployeeData.employees[EmployeeData.listIndex - 1].userID}");
+
+                    try
+                    {
+                        con.Open();
+                        MessageBox.Show("Connection opened successfully.");
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show($"{rowsAffected} row(s) inserted.");
+
+                        con.Close();
+                        MessageBox.Show("Connection closed.");
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Ticket added successfully.");
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("No rows inserted.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
 
 
-            int sindex = 0;
-            string r, c ="", t, o, md, mt, off = "No";
-            short rn = 0, cc = 0;
-        
-            // load the list box title
 
-            
-
-            //MessageBox.Show("Schedule data loaded", "Data Loaded", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            con.Close();
-
-  
-
+        private void clearTextSelection()
+        {
+            helpType.SelectedItem = null;
+            prgType.SelectedItem = null;
+            prgName.SelectedItem = null;    
+            ticketName.Clear();
+            ticketDesc.Clear();
         }
     }
 }
